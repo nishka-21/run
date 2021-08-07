@@ -14,16 +14,20 @@ function preload()
     path.addImage(pathImg);
      path.velocityY = 4;
       path.scale=1.2;
-       //creating boy running boy = 
+
+       //creating boy running boy 
        boy=createSprite(180,340,30,30); 
        boy.scale=0.08; 
-       boy.addAnimation("JakeRunning",boyImg); 
+       boy.addAnimation("JakeRunning",boyImg);
+
        // create left Boundary
         leftBoundary=createSprite(0,0,100,800); 
-        leftBoundary.visible = false; 
+        leftBoundary.visible = false;
+
         //create right Boundary 
         rightBoundary=createSprite(410,0,100,800); 
-        rightBoundary.visible = false; } 
+        rightBoundary.visible = false;
+       } 
         function draw() 
         { background(0);
            path.velocityY = 4;
@@ -35,6 +39,8 @@ function preload()
              boy.collide(rightBoundary);
               //code to reset the background 
               if(path.y > 400 )
-              { path.y = height/2; } 
+              { 
+                path.y = height/2; 
+              } 
               drawSprites(); 
             }
